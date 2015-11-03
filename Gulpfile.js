@@ -19,6 +19,7 @@ gulp.task('serve', function() {
         .pipe(server({
             livereload: true,
             directoryFile: './app/index.html',
+			port: 8080,
             open: true
         }));
 });
