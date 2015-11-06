@@ -7,31 +7,41 @@
     </head>
 
     <body class="mdc-bg-grey">
-        <md-toolbar class="md-whiteframe-4dp">
+        <md-toolbar md-scroll-shrink class="md-whiteframe-4dp">
             <div class="md-toolbar-tools">
                 <h2 class="md-title">Enrollment System</h2>
             </div>
         </md-toolbar>
         <md-content class="mdc-bg-grey">
 			<div layout="row" layout-fill>
-				<md-whiteframe flex="60" flex-offset="20" layout="column" layout-padding class="mdc-bg-grey-50 md-whiteframe-1dp content-container">
+				<md-whiteframe flex="100" flex-lg="80" flex-gt-lg="60" flex-offset-lg="10" flex-offset-gt-lg="20" layout="column" layout-padding class="mdc-bg-grey-50 md-whiteframe-1dp content-container">
 
-					<h1 class="md-display-1">Account</h1>
+					<h1 class="md-title">Account</h1>
 
-					<div layout="row">
-						<md-input-container flex="70">
-							<label>Name</label>
-							<input type="text">
-						</md-input-container>
-						<div flex-offset="5"></div>
-						<md-input-container flex="25">
+					<div layout="row" layout-wrap>
+						<div layout="row" layout-wrap flex="100" flex-gt-sm="70">
+							<md-input-container flex="100" flex-gt-sm="50">
+								<label>First Name</label>
+								<input type="text">
+							</md-input-container>
+							<md-input-container flex="100" flex-gt-sm="50">
+								<label>Last Name</label>
+								<input type="text">
+							</md-input-container>
+						</div>
+						<div flex-offset="5" show-gt-sm></div>
+						<md-input-container flex="100" flex-gt-sm="25">
 							<label>Year/Level</label>
 							<md-select ng-model="level">
 								<md-optgroup label="Elementary">
 									<md-option value="kindergarten">Kindergarten</md-option>
 									<md-option value="grade1">Grade 1</md-option>
 									<md-option value="grade2">Grade 2</md-option>
-									<md-option value="grade2">Grade 2</md-option>
+									<md-option value="grade3">Grade 3</md-option>
+									<md-option value="grade4">Grade 4</md-option>
+									<md-option value="grade5">Grade 5</md-option>
+									<md-option value="grade6">Grade 6</md-option>
+									<md-option value="grade7">Grade 7</md-option>
 								</md-optgroup>
 							</md-select>
 						</md-input-container>
@@ -42,9 +52,17 @@
 						<input type="text">
 					</md-input-container>
 
+					<div layout="row" layout-wrap>
+						<md-input-container flex="100">
+							<label>Phone Number</label>
+							<input type="number">
+						</md-input-container>
+					</div>
+
 				</md-whiteframe>
 			</div>
         </md-content>
+
         <script type="text/javascript" src="js/scripts.min.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
     </body>
