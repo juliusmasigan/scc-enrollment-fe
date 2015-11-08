@@ -1,3 +1,22 @@
 .content-container {
 	padding:10px 20px;
 }
+
+md-input-container {
+	padding-bottom:5px;
+}
+
+.account-gender md-radio-button {
+	display:inline-block;
+	margin:5px 15px 5px 4px;
+}
+.account-gender .input-label {
+	padding-top:5px;
+	padding-left:4px;
+	box-sizing:border-box;
+	font-size:0.7rem;
+}
+
+.section-divider {
+	margin-top:2rem;
+}

@@ -1,6 +1,15 @@
-body {
+@media(min-width:900px) {
+	html {
+		font-size:18px;
+	}
 }
 
-md-input-container {
-	padding-bottom:5px;
+@media(max-width:899px) {
+	html {
+		font-size:14px;
+	}
+}
+
+.md-title {
+	font-size:1.5rem;
 }

@@ -1,1 +1,1 @@
-md-input-container{padding-bottom:5px}.content-container{padding:10px 20px}
+@media (min-width: 900px){html{font-size:18px}}@media (max-width: 899px){html{font-size:14px}}.md-title{font-size:1.5rem}.content-container{padding:10px 20px}md-input-container{padding-bottom:5px}.account-gender md-radio-button{display:inline-block;margin:5px 15px 5px 4px}.account-gender .input-label{padding-top:5px;padding-left:4px;box-sizing:border-box;font-size:0.7rem}.section-divider{margin-top:2rem}

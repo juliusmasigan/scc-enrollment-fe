@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="enrollmentApp">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     </head>
 
     <body class="mdc-bg-grey">
-        <md-toolbar md-scroll-shrink class="md-whiteframe-4dp">
+        <md-toolbar class="md-whiteframe-4dp">
             <div class="md-toolbar-tools">
                 <h2 class="md-title">Enrollment System</h2>
             </div>
@@ -16,7 +16,7 @@
 			<div layout="row" layout-fill>
 				<md-whiteframe flex="100" flex-lg="80" flex-gt-lg="60" flex-offset-lg="10" flex-offset-gt-lg="20" layout="column" layout-padding class="mdc-bg-grey-50 md-whiteframe-1dp content-container">
 
-					<h1 class="md-title">Account</h1>
+					<h1 class="md-title mdc-text-blue-A200">Account</h1>
 
 					<div layout="row" layout-wrap>
 						<div layout="row" layout-wrap flex="100" flex-gt-sm="70">
@@ -53,7 +53,76 @@
 					</md-input-container>
 
 					<div layout="row" layout-wrap>
-						<md-input-container flex="100">
+						<div flex="100" flex-gt-sm="50" class="account-gender">
+							<div class="mdc-text-grey-600 input-label">Gender</div>
+							<md-radio-group ng-model="gender" layout="row" layout-fill>
+								<md-radio-button value="male" flex>Male</md-radio-button>
+								<md-radio-button value="female" flex>Female</md-radio-button>
+							</md-radio-group>
+							<md-divider></md-divider>
+						</div>
+						<div flex="5" show-gt-sm></div>
+						<md-input-container flex="100" flex-gt-sm="45">
+							<label>Phone Number</label>
+							<input type="number">
+						</md-input-container>
+					</div>
+					
+					<div layout="row" layout-wrap>
+						<md-input-container flex="100" flex-gt-sm="70">
+							<label>Place of Birth</label>
+							<input type="text">
+						</md-input-container>
+						<div flex="5" show-gt-sm></div>
+						<md-input-container flex="100" flex-gt-sm="25">
+							<label>Date of Birth</label>
+							<input type="date">
+						</md-input-container>
+					</div>
+
+					<div class="section-divider"></div>
+
+					<h1 class="md-title mdc-text-blue-A200">Profile</h1>
+
+					<md-input-container>
+						<label>School Last Attended</label>
+						<input type="text">
+					</md-input-container>
+
+					<md-input-container>
+						<label>School Address</label>
+						<input type="text">
+					</md-input-container>
+
+					<md-input-container>
+						<label>Father's Name</label>
+						<input type="text">
+					</md-input-container>
+
+					<div layout="row" layout-wrap>
+						<md-input-container flex="100" flex-gt-sm="50">
+							<label>Occupation</label>
+							<input type="text">
+						</md-input-container>
+						<div flex="5" show-gt-sm></div>
+						<md-input-container flex="100" flex-gt-sm="45">
+							<label>Phone Number</label>
+							<input type="number">
+						</md-input-container>
+					</div>
+
+					<md-input-container>
+						<label>Mother's Name</label>
+						<input type="text">
+					</md-input-container>
+
+					<div layout="row" layout-wrap>
+						<md-input-container flex="100" flex-gt-sm="50">
+							<label>Occupation</label>
+							<input type="text">
+						</md-input-container>
+						<div flex="5" show-gt-sm></div>
+						<md-input-container flex="100" flex-gt-sm="45">
 							<label>Phone Number</label>
 							<input type="number">
 						</md-input-container>
