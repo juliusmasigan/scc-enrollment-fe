@@ -1,0 +1,71 @@
+<div layout="row" layout-align="center center" layout-wrap ng-controller="PersonalInfoCtrl">
+	<form name="personalinfoform" layout="row" layout-wrap flex="70" flex-gt-sm="50">
+        <div flex="100">
+            <h1 class="heading-1 md-display-1 mdc-text-grey-900">Personal Information</h1>
+        </div>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">First Name</label>
+            <input type="text" ng-model="firstName" name="firstname" required>
+            <div ng-messages="personalinfoform.firstname.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Middle Name</label>
+            <input type="text" ng-model="middleName">
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Last Name</label>
+            <input type="text" ng-model="lastName" name="lastname" required>
+            <div ng-messages="personalinfoform.lastname.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+
+        <div flex="100" class="account-gender">
+            <div class="mdc-text-grey-900 input-label">Gender</div>
+            <md-radio-group ng-model="gender" class="md-primary" layout="row" layout-fill name="gender" required>
+                <md-radio-button value="male" flex class="mdc-text-grey-900">Male</md-radio-button>
+                <md-radio-button value="female" flex class="mdc-text-grey-900">Female</md-radio-button>
+            </md-radio-group>
+            <md-divider></md-divider>
+            <div class="md-errors-spacer"></div>
+        </div>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Address</label>
+            <input type="text" ng-model="address" name="address" required>
+            <div ng-messages="personalinfoform.address.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Contact Number</label>
+            <input type="number" ng-model="contactNumber">
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Place of Birth</label>
+            <input type="text" ng-model="birthPlace" name="birthplace" required>
+            <div ng-messages="personalinfoform.birthplace.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+
+        <md-input-container flex="100">
+            <label class="mdc-text-grey-900">Date of Birth</label>
+            <input type="date" ng-model="birthDate" name="birthdate" required>
+            <div ng-messages="personalinfoform.birthdate.$error">
+                <div ng-message="required">This is required!</div>
+            </div>
+        </md-input-container>
+
+        <div flex="40" layout="column" flex-offset="60">
+            <md-button ng-disabled="disabled" class="md-raised md-primary" ng-click="submit($event)">Next</md-button>
+        </div>
+    </div>
+</div>

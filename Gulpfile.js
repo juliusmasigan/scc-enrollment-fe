@@ -3,14 +3,33 @@ var concat = require('gulp-concat');
 var server = require('gulp-server-livereload');
 var sass = require('gulp-sass');
 
-gulp.task('styles', function() {
-    return gulp.src('./bower_components/**/*.min.css')
+gulp.task('min-css', function() {
+    gulp.src([
+        './bower_components/material-design-color-palette/css/material-design-color-palette.min.css',
+        './bower_components/angular-material/angular-material.min.css'
+        ])
         .pipe(concat('styles.min.css'))
         .pipe(gulp.dest('./app/css/'));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src('./bower_components/**/*.min.js')
+gulp.task('min-js', function() {
+    gulp.src('./app/js/services/*.js')
+        .pipe(concat('services.js'))
+        .pipe(gulp.dest('./app/js/'));
+
+    gulp.src('./app/js/controllers/*.js')
+        .pipe(concat('controllers.js'))
+        .pipe(gulp.dest('./app/js/'));
+
+    gulp.src([
+        './bower_components/angular/angular.min.js',
+        './bower_components/angular-animate/angular-animate.min.js',
+        './bower_components/angular-aria/angular-aria.min.js',
+        './bower_components/angular-messages/angular-messages.min.js',
+        './bower_components/angular-resource/angular-resource.min.js',
+        './bower_components/angular-route/angular-route.min.js',
+        './bower_components/angular-material/angular-material.min.js'
+        ])
         .pipe(concat('scripts.min.js'))
         .pipe(gulp.dest('./app/js/'));
 });
@@ -20,6 +39,9 @@ gulp.task('compileSass', function() {
 		.pipe(sass({outputStyle:"compressed"}).on('error', sass.logError))
 		.pipe(concat('main.min.css'))
 		.pipe(gulp.dest('./app/css/'));
+});
+
+gulp.task('distribute', function() {
 });
 
 gulp.task('compileSass:watch', function() {

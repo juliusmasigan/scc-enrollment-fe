@@ -1,10 +1,13 @@
 {
-  "name": "enrollment-sys-fe",
-  "version": "0.0.0",
+  "name": "enrollment-sys",
+  "description": "",
+  "main": "index.js",
   "authors": [
     "Julius Masigan"
   ],
-  "license": "MIT",
+  "license": "ISC",
+  "homepage": "https://github.com/juliusmasigan/scc-enrollment-fe",
+  "moduleType": [],
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,7 +16,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular-material": "~0.11.4",
-    "material-design-color-palette": "~1.1.0"
+    "angular-material": "~1.0.1",
+    "angular-route": "~1.4.7",
+    "material-design-color-palette": "~1.1.0",
+    "angular-resource": "~1.5.6"
   }
 }
